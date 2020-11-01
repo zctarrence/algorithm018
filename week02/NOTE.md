@@ -89,6 +89,7 @@ if (++size > threshold)
 ```
 <br>
 **get函数：**
+<br>
 get调用了getNode方法，若结果为空，则返回空，否则返回e.value
 ```
 return (e = getNode(hash(key), key)) == null ? null : e.value;
