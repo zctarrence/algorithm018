@@ -87,24 +87,24 @@ if (++size > threshold)
         afterNodeInsertion(evict);
         return null;
 ```
-<br>
+
 **get函数：**
 <br>
 get调用了getNode方法，若结果为空，则返回空，否则返回e.value
 ```
 return (e = getNode(hash(key), key)) == null ? null : e.value;
-```
+ ```
 ①首先判断HashMap中的数组是否为空以及长度是否大于0
 ```
 if ((tab = table) != null && (n = tab.length) > 0 &&
             (first = tab[(n - 1) & hash]) != null)
-```
+ ```
 ②获取key下标对应的链表对象，并比较第一个是否满足，若满足则返回第一个。
 ```
 if (first.hash == hash && // always check first node
                 ((k = first.key) == key || (key != null && key.equals(k))))
                 return first;
-```
+ ```
 ③判断下一个对象是否为空，是的话则没有找到对应的值。若不是空，则判断是否是TreeNode，是的话用树的方法解决。
 ```
 if ((e = first.next) != null) {
@@ -118,10 +118,16 @@ do {
                         ((k = e.key) == key || (key != null && key.equals(k))))
                         return e;
                 } while ((e = e.next) != null);
-```
+ ```
 ⑤如果都不符合，则返回null。
-`return null;`
+```
+return null;
+```
+
 <br>
 由于内功不够深厚，在看代码的时候查阅了一些资料，链接如下：
 https://blog.csdn.net/kai3123919064/article/details/90343177。
+
+<br>
+❤感谢老师的批阅❤
 
