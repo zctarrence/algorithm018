@@ -12,8 +12,9 @@
 <br>
 <br>
 这次在写“最近公共祖先题目时”，来自国际站光头哥的一段代码十分简练，将自己三行的代码浓缩了，分享一下。<br>
+
 ```
- //自己写法：
+ //自己的写法
  if (left == null) return right;
  if (right == null) return left;
  return root;
