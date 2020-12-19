@@ -102,8 +102,9 @@ public static int[] function_selectionSort(int[] arr) {
 		return arr;
 	}
   ```
-  <br>
+  
 version2
+
 ```
 public static int[] function_selectionSort(int[] arr) {
 		int len = arr.length;
