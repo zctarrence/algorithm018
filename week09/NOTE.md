@@ -7,16 +7,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 比如在1143.最长公共子序列题目中(比较两个字符串text1和text2的最长公共子序列)，我们对于dp数组的定义是：
 ```
-dp[text1.length() + 1][text2.length() + 1]
+        dp[text1.length() + 1][text2.length() + 1]
 ```
 而不是:
 ```
-dp[text1.length()][text2.length() ]
+        dp[text1.length()][text2.length() ]
 ```
 在这里专门空出了第一行和第一列，以便于后续的计算。这一步之前如果没有遇到过，自己很难可以想到。<br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经过这一题之后，在做718.最长重复子数组（比较数组A和B的连续最长子数组）的题目时，我利用了类似的方法，建立了数组：
 ```
-dp[A.length + 1][B.length + 1]
+        dp[A.length + 1][B.length + 1]
  ```
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最后，感觉训练营时间过得好快，非常的舍不得！很幸运遇到了，优秀的超哥、优秀的助教老师以及优秀的大家！
